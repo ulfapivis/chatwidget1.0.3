@@ -78,12 +78,9 @@ ws.onopen = function(e) {
 const createChatLi = (message, className, imgSrc) => {
   // Create a chat <li> element with passed message and className
   const chatLi = document.createElement("li");
-  chatLi.classList.add("chat", `${className}`);
+  chatLi.classList.add("chat", `${className}`);  
 
-  let chatContent = className === "outgoing" ? `<div class="message-container" style="background:${config.chatbotColor}; "><p class="message-text"></p></div><br>` : `<span class="material-symbols-outlined" style="background:${config.chatbotColor}; ">smart_toy</span><div class="message-container" ><p class="message-text"></p></div>`;
-
-// let chatContent = className === "outgoing" ? `<div class="message-container" style="background:${config.chatbotColor}; border-radius: 10px 10px 0 10px;"><p class="message-text"></p></div><br>` : `<span class="material-symbols-outlined" style="background:${config.chatbotColor}; width: 35px; height: 35px; cursor: default; line-height: 36px; align-self: flex-end; border-radius: 4px; margin: 0 10px 7px 0;">smart_toy</span><div class="message-container" ><p class="message-text"></p></div>`;
-
+  let chatContent = className === "outgoing" ? `<div class="message-container" style="background:${config.chatbotColor}; border-radius: 10px 10px 0 10px;"><p class="message-text"></p></div><br>` : `<span class="material-symbols-outlined" style="background:${config.chatbotColor}; width: 35px; height: 35px; cursor: default; line-height: 36px; align-self: flex-end; border-radius: 4px; margin: 0 10px 7px 0;">smart_toy</span><div class="message-container" ><p class="message-text"></p></div>`;
 
   if(imgSrc) {
     chatContent += `<div class="image-container"><img class="chat-image" src="${imgSrc}" alt="Uploaded image"/></div>`;
